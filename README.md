@@ -4,7 +4,7 @@ DelishBite is a simple and responsive food ordering website built using **HTML, 
 It includes multiple pages, a food menu with search and filters, image-based search, and a basic login–signup system using localStorage.
 
 ## 🌐 Live Link
-https://YOUR-VERCEL-LINK.vercel.app/
+https://delishbite-foodwave-e5od9u71b-nikitas-projects-43b06959.vercel.app/
 
 ## 📁 Pages Included
 - Home  
