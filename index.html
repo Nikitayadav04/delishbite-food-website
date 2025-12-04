@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DelishBite – Food Paradise</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">🍽️</span>
+      <span class="logo-text">Delish<span>Bite</span></span>
+    </div>
+    <nav class="nav">
+      <a href="#hero">Home</a>
+      <a href="#search">Search</a>
+      <a href="#menu">Menu</a>
+      <a href="#specials">Specials</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn ghost" id="open-login">Login</button>
+      <button class="btn solid" id="open-signup">Sign Up</button>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>
+        Taste <span>Luxury</span> On Every Plate
+      </h1>
+      <p>
+        Explore a curated collection of gourmet dishes, street food cravings,
+        and healthy bowls – all in one elegant, tempting place.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn solid">Explore Menu</a>
+        <a href="#specials" class="btn ghost">Today’s Specials</a>
+      </div>
+      <div class="hero-highlight">
+        <div>
+          <h3>50+ Dishes</h3>
+          <p>Hand-picked flavors from around the world</p>
+        </div>
+        <div>
+          <h3>4.8 ★</h3>
+          <p>Loved by food enthusiasts</p>
+        </div>
+        <div>
+          <h3>Fast Delivery</h3>
+          <p>Fresh, hot & on time</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card hero-card-main">
+        <h3>Chef’s Signature Platter</h3>
+        <p>Creamy Alfredo pasta, garlic bread & roasted veggies</p>
+        <span class="price-tag">₹499</span>
+      </div>
+      <div class="hero-badges">
+        <span>🔥 Trending</span>
+        <span>🌱 Healthy Options</span>
+        <span>🍰 Desserts Heaven</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEARCH SECTION ================= -->
+  <section id="search" class="search-section">
+    <h2>Find Your Perfect Bite</h2>
+    <p class="section-subtitle">
+      Search by name, category, price – or pick a dish image to instantly filter.
+    </p>
+
+    <div class="search-controls">
+      <div class="search-field">
+        <label for="search-text">Search by name</label>
+        <input
+          type="text"
+          id="search-text"
+          placeholder="Type e.g. pizza, biryani, brownie..."
+        />
+      </div>
+
+      <div class="search-field">
+        <label for="search-category">Category</label>
+        <select id="search-category">
+          <option value="all">All Categories</option>
+          <option value="Pizza">Pizza</option>
+          <option value="Burgers">Burgers</option>
+          <option value="Indian">Indian</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Desserts">Desserts</option>
+          <option value="Drinks">Drinks</option>
+          <option value="Salads">Salads</option>
+          <option value="Pasta">Pasta</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Bowls">Bowls</option>
+        </select>
+      </div>
+
+      <div class="search-field">
+        <label for="price-range">
+          Max Price:
+          <span id="price-value">₹800</span>
+        </label>
+        <input
+          type="range"
+          id="price-range"
+          min="100"
+          max="1000"
+          step="50"
+          value="800"
+        />
+      </div>
+    </div>
+
+    <!-- IMAGE SEARCH “MODULE” -->
+    <div class="image-search">
+      <h3>Image Based Search</h3>
+      <p class="image-search-text">
+        Tap a food card – we’ll show more dishes that feel just like it.
+      </p>
+      <div class="image-search-grid">
+        <button class="image-chip" data-tag="pizza">
+          <span class="image-chip-emoji">🍕</span>
+          <span>Cheesy Pizza</span>
+        </button>
+        <button class="image-chip" data-tag="burger">
+          <span class="image-chip-emoji">🍔</span>
+          <span>Juicy Burger</span>
+        </button>
+        <button class="image-chip" data-tag="biryani">
+          <span class="image-chip-emoji">🍛</span>
+          <span>Royal Biryani</span>
+        </button>
+        <button class="image-chip" data-tag="dessert">
+          <span class="image-chip-emoji">🍰</span>
+          <span>Sweet Dessert</span>
+        </button>
+        <button class="image-chip" data-tag="drink">
+          <span class="image-chip-emoji">🥤</span>
+          <span>Refreshing Drinks</span>
+        </button>
+        <button class="image-chip" data-tag="healthy">
+          <span class="image-chip-emoji">🥗</span>
+          <span>Healthy Bowls</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MENU SECTION ================= -->
+  <section id="menu" class="menu-section">
+    <div class="section-header">
+      <h2>Full Menu</h2>
+      <p class="section-subtitle">
+        Over 50 dishes across pizzas, burgers, Indian classics, Asian, desserts &
+        more.
+      </p>
+      <div class="menu-view-toggle">
+        <button class="btn small solid" id="view-grid">Grid View</button>
+        <button class="btn small ghost" id="view-list">List View</button>
+      </div>
+    </div>
+
+    <div id="menu-count" class="menu-count">Showing 0 dishes</div>
+
+    <div id="menu-container" class="menu-grid">
+      <!-- Cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- ================= TODAY’S SPECIALS ================= -->
+  <section id="specials" class="specials-section">
+    <h2>Today’s Curated Specials</h2>
+    <div class="specials-grid">
+      <article class="special-card">
+        <h3>Monsoon Comfort Bowl</h3>
+        <p>Hot tomato soup, grilled cheese, and crispy fries.</p>
+        <span class="price-tag">₹349</span>
+      </article>
+      <article class="special-card">
+        <h3>Midnight Munch Combo</h3>
+        <p>Chicken burger, loaded fries & cold coffee.</p>
+        <span class="price-tag">₹399</span>
+      </article>
+      <article class="special-card">
+        <h3>Fit & Fresh Platter</h3>
+        <p>Quinoa salad, fruit bowl, and detox drink.</p>
+        <span class="price-tag">₹429</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= POPULAR CATEGORIES ================= -->
+  <section class="categories-section">
+    <h2>Browse by Cravings</h2>
+    <div class="categories-grid">
+      <div class="category-pill">🔥 Spicy</div>
+      <div class="category-pill">🌱 Vegetarian</div>
+      <div class="category-pill">🍗 Non-Veg</div>
+      <div class="category-pill">🍳 Breakfast</div>
+      <div class="category-pill">🍰 Desserts</div>
+      <div class="category-pill">🥤 Beverages</div>
+      <div class="category-pill">🥗 Healthy</div>
+      <div class="category-pill">🎉 Party Packs</div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section id="gallery" class="gallery-section">
+    <h2>Food Gallery</h2>
+    <p class="section-subtitle">
+      A visual tour of plates that make you instantly hungry.
+    </p>
+    <div class="gallery-grid">
+      <div class="gallery-item g1">Gourmet Pizza</div>
+      <div class="gallery-item g2">Sizzling Sizzler</div>
+      <div class="gallery-item g3">Rainbow Desserts</div>
+      <div class="gallery-item g4">Fresh Salads</div>
+      <div class="gallery-item g5">Cold Brews</div>
+      <div class="gallery-item g6">Indian Thali</div>
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS ================= -->
+  <section id="reviews" class="reviews-section">
+    <h2>What Food Lovers Say</h2>
+    <div class="reviews-grid">
+      <article class="review-card">
+        <p>
+          “The biryani and brownies are unreal. The website is so smooth and
+          easy to use!”
+        </p>
+        <span class="review-author">— Riya, Food Blogger</span>
+      </article>
+      <article class="review-card">
+        <p>
+          “I love the image search; I just tap on a pizza chip and boom – pizzas
+          everywhere!”
+        </p>
+        <span class="review-author">— Arjun, Student</span>
+      </article>
+      <article class="review-card">
+        <p>
+          “Perfect balance of comfort foods and healthy bowls. So many options!”
+        </p>
+        <span class="review-author">— Neha, Fitness Enthusiast</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= STATS / HIGHLIGHTS ================= -->
+  <section class="stats-section">
+    <div class="stat-card">
+      <h3>10k+</h3>
+      <p>Orders Served</p>
+    </div>
+    <div class="stat-card">
+      <h3>50+</h3>
+      <p>Unique Dishes</p>
+    </div>
+    <div class="stat-card">
+      <h3>24/7</h3>
+      <p>Order Anytime</p>
+    </div>
+    <div class="stat-card">
+      <h3>30 mins</h3>
+      <p>Average Delivery</p>
+    </div>
+  </section>
+
+  <!-- ================= NEWSLETTER ================= -->
+  <section class="newsletter-section">
+    <h2>Get Secret Recipes & Offers</h2>
+    <p>Subscribe to receive chef tips, secret sauces & exclusive coupons.</p>
+    <form class="newsletter-form" id="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Enter your email" />
+      <button class="btn solid" type="submit">Subscribe</button>
+    </form>
+    <p class="newsletter-message" id="newsletter-message"></p>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="about-section">
+    <h2>About DelishBite</h2>
+    <p>
+      DelishBite is a modern food experience – blending luxurious UI design
+      with mouth-watering flavors. Built with HTML, CSS, and JavaScript, this
+      website lets you browse a huge interactive menu, search with text, images
+      and prices, and manage your account with login & sign up.
+    </p>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-grid">
+      <form class="contact-form" id="contact-form">
+        <div class="form-field">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" required />
+        </div>
+        <div class="form-field">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" required />
+        </div>
+        <div class="form-field">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" rows="4" required></textarea>
+        </div>
+        <button class="btn solid" type="submit">Send Message</button>
+        <p id="contact-status" class="contact-status"></p>
+      </form>
+      <div class="contact-info">
+        <h3>Visit Us</h3>
+        <p>Food Street, Gourmet Lane, Flavor City</p>
+        <p>Phone: +91-98765-43210</p>
+        <p>Email: hello@delishbite.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© <span id="year"></span> DelishBite. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#hero">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <!-- ================= AUTH MODAL (LOGIN / SIGNUP PAGES) ================= -->
+  <div class="auth-overlay hidden" id="auth-overlay">
+    <div class="auth-modal">
+      <button class="auth-close" id="auth-close">✕</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-auth-tab="login">Login</button>
+        <button class="auth-tab" data-auth-tab="signup">Sign Up</button>
+      </div>
+
+      <!-- LOGIN PAGE -->
+      <form id="login-form" class="auth-form active">
+        <h2>Welcome Back</h2>
+        <div class="form-field">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" required />
+        </div>
+        <div class="form-field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <button type="submit" class="btn solid full">Login</button>
+        <p class="auth-msg" id="login-message"></p>
+      </form>
+
+      <!-- SIGNUP PAGE -->
+      <form id="signup-form" class="auth-form">
+        <h2>Create Your Account</h2>
+        <div class="form-field">
+          <label for="signup-name">Name</label>
+          <input type="text" id="signup-name" required />
+        </div>
+        <div class="form-field">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" required />
+        </div>
+        <div class="form-field">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" required />
+        </div>
+        <button type="submit" class="btn solid full">Sign Up</button>
+        <p class="auth-msg" id="signup-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
